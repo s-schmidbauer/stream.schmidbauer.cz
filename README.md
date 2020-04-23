@@ -1,1 +1,1 @@
-# vpn.schmidbauer.cz
+# stream.schmidbauer.cz
