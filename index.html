@@ -56,15 +56,15 @@
 
   <div class="section-small services" id="services">
     <div class="container">
-      <h2 class="services-security-header">Free protected live stream</h2>
+      <h2 class="services-security-header">Free live stream</h2>
       <h5 class="services-security-description">Watch anywhere. All major formats supported.</h5>
       <hr>
       <form action="https://formspree.io/xbjanzbn" method="POST">
         <label>Your email: <input type="email" name="_email" maxlength="40" size="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></label>
-        <p>You receive a mail once your stream is ready.</p>
-        <p>Once ready: Start streaming and share your link.</p>
-        <p>Works on all platforms.</p>
+        <label>Password protect stream? <input type="checkbox" name="_login" value="login"></label>
         <button type="submit" name="free" value="free">Sign up for free</button>
+        <p>--</p>
+        <p>You'll get a mail once ready</p>
     </div>
   </div>
 
@@ -74,7 +74,8 @@
       <h5 class="services-security-description">From your browser or mobile</h5>
       <hr>
       <ul class="services-security">
-        <li>We've sent you your stream address, user and password by email.</li>
+        <li>We've sent you your stream address</li>
+        <li>If you chose to protect your stream: The mail also includes user and password to access the stream address</li>
         <li>Besides a browser, you can also watch the stream using a media player like VLC</li>
       </ul>
     </div>
