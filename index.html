@@ -30,6 +30,8 @@
 </head>
 <body>
 
+  <script src="https://www.paypal.com/sdk/js?client-id=AS2Y7kyrGTYkFoBb8b3gSVpRWAHHrqZYWJST1E3FMVlAeeQf0AwGiAVtE0qk7IH9umzF3qc4JCO9VkkP&currency=EUR"></script>
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -54,30 +56,88 @@
       <h6 class="intro-header">IT consulting & services</h6>
   </div>
 
+
   <div class="section-small services" id="services">
     <div class="container">
-      <h2 class="services-security-header">Free live stream</h2>
-      <h5 class="services-security-description">Watch anywhere. All major formats supported.</h5>
+      <h2 class="services-security-header"><strong>Open</strong> live stream</h2>
+      <h5 class="services-security-description">High quality stream. All platforms.</h5>
       <hr>
-      <form action="https://formspree.io/xbjanzbn" method="POST">
+      <form action="https://formspree.io/xbjanzbn" id="form1" method="POST">
         <label>Your email: <input type="email" name="_email" maxlength="40" size="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></label>
-        <label>Password protect stream? <input type="checkbox" name="_login" value="login"></label>
-        <button type="submit" name="free" value="free">Sign up for free</button>
-        <p>--</p>
-        <p>You'll get a mail once ready</p>
+        <label>Password protected stream? <input type="checkbox" name="_login" value="login" disabled></label>
+        <button type="submit" name="free" value="free">Free sign up</button>
+        <hr>
+        <h3 class="services-security-description">Features</h3>
+          <ul class="list">
+            <li>A web page for you to share with your viewers</li>
+            <li>Your stream address and instructions on how to setup your stream</li>
+            <li><strong>The stream address is valid for 48 hours</strong></li>
+          </ul>
+        <hr>
+      </form>
     </div>
   </div>
 
   <div class="section-small services" id="services">
     <div class="container">
-      <h2 class="services-security-header">Watch stream</h2>
-      <h5 class="services-security-description">From your browser or mobile</h5>
+      <h2 class="services-security-header"><strong>Private</strong> live stream</h2>
+      <h5 class="services-security-description">Monetize your show. Watch it later.</h5>
       <hr>
-      <ul class="services-security">
-        <li>We've sent you your stream address</li>
-        <li>If you chose to protect your stream: The mail also includes user and password to access the stream address</li>
-        <li>Besides a browser, you can also watch the stream using a media player like VLC</li>
-      </ul>
+      <form action="https://formspree.io/xbjanzbn" id="form2" method="POST">
+        <label>Your email: <input type="email" name="_email" maxlength="40" size="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></label>
+        <label>How many viewers? <input type="viewers" id="viewers" name="_viewers" maxlength="2" size="2" pattern="[0-9]+[0-9]$" required></label>
+        <label>Password protected stream? <input type="checkbox" name="_login" value="login" checked disabled></label>
+        <strong>How much?</strong> 1.20 Euro per viewer (incl. VAT)
+      </form>
+      <hr>
+      <h3 class="services-security-description">More Features</h3>
+        <ul class="list">
+          <li>A protected web page for you to share with your viewers</li>
+          <li>A recording of your stream(s) to download</li>
+          <li>Your stream address and instructions on how to setup your stream</li>
+          <li>Your own account and password to start streaming</li>
+          <li>Your viewers accounts and passwords</li>
+          <li><strong>The logins and stream address is valid for 48 hours</strong></li>
+        </ul>
+      <hr>
+      <h3 class="services-security-description">Checkout</h3>
+      <div id="paypal-button-container"></div>
+        <script>
+          paypal.Buttons({
+            createOrder: function(data, actions) {
+              var price = 1.20
+              var amountViewers = Number(document.getElementById("viewers").value);
+              var total = (price * amountViewers).toString();
+
+              // This function sets up the details of the transaction, including the amount and line item details.
+              return actions.order.create({
+                purchase_units: [{
+                  amount: {
+                    value: total
+                  }
+                }]
+              });
+            },
+            onApprove: function(data, actions) {
+              // This function captures the funds from the transaction.
+              return actions.order.capture().then(function(details) {
+                // This function shows a transaction success message to your buyer.
+                document.getElementById("form2").submit();
+              });
+            }
+          }).render('#paypal-button-container');
+          //This function displays Smart Payment Buttons on your web page.
+        </script>
+      <hr>
+      <h3 class="services-security-description">What's next?</h3>
+      <p>Got your data? Your viewers are ready to watch? Your stream is live? Great!</p>
+        <ul class="list">
+          <li>Provide each viewer the stream address</li>
+          <li>Provide each viewer their access credentials</li>
+          <li><strong>You're good to go!</strong></li>
+        </ul>
+        <p>--</p>
+
     </div>
   </div>
 
