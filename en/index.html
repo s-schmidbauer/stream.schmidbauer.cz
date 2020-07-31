@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>schmidbauer.cz - IT consulting and services</title>
+  <meta name="description" content="Secure Cloud, Mail and more services in Czechia">
+  <meta name="author" content="Stefan Schmidbauer">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../css/raleway.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+</head>
+<body>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AS2Y7kyrGTYkFoBb8b3gSVpRWAHHrqZYWJST1E3FMVlAeeQf0AwGiAVtE0qk7IH9umzF3qc4JCO9VkkP&currency=EUR"></script>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="navbar-spacer"></div>
+  <nav class="navbar">
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-link" href="https://www.schmidbauer.cz/en/#services">Services</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="https://www.schmidbauer.cz/en/#security">Security</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="https://www.schmidbauer.cz/en/#contact">Contact</a></li>
+        <li class="navbar-item-lang"><a class="navbar-link-lang" href="https://www.schmidbauer.cz/cz/">CZ</a></li>
+        <li class="navbar-item-lang"><a class="navbar-link-lang" href="https://www.schmidbauer.cz/de/">DE</a></li>
+        <li class="navbar-item-lang"><a class="navbar-link-lang" href="https://www.schmidbauer.cz/en/">EN</a></li>
+        <li class="navbar-item-lang"><a class="navbar-link-lang">-</a></li>
+        <li class="navbar-item-special"><a class="navbar-link-special" href="https://stream.schmidbauer.cz" target="_blank">Stream</a></li>
+        <li class="navbar-item-special"><a class="navbar-link-special" href="https://vpn.schmidbauer.cz" target="_blank">VPN</a></li>
+        <li class="navbar-item-special"><a class="navbar-link-special" href="https://cloud.schmidbauer.cz" target="_blank">Cloud</a></li>
+        <li class="navbar-item-special"><a class="navbar-link-special" href="https://mail.schmidbauer.cz" target="_blank">Mail</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="intro-small">
+      <h3 class="intro-logo">schmidbauer</h3>
+      <h6 class="intro-header">IT consulting & services</h6>
+  </div>
+
+
+  <div class="section-small services" id="services">
+    <div class="container">
+      <h2 class="services-security-header"><strong>Open</strong> live stream</h2>
+      <h5 class="services-security-description">High quality stream. All platforms.</h5>
+      <hr>
+      <form action="https://formspree.io/xbjanzbn" id="form1" method="POST">
+        <label>Your email: <input type="email" name="_email" maxlength="40" size="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></label>
+        <label>Password protected stream? <input type="checkbox" name="_login" value="login" disabled></label>
+        <button type="submit" name="free" value="free">Free sign up</button>
+        <hr>
+        <h3 class="services-security-description">Features</h3>
+          <ul class="list">
+            <li>A web page for you to share with your viewers</li>
+            <li>Your stream address and instructions on how to setup your stream</li>
+            <li><strong>The stream address is valid for 48 hours</strong></li>
+          </ul>
+        <hr>
+      </form>
+    </div>
+  </div>
+
+  <div class="section-small services" id="services">
+    <div class="container">
+      <h2 class="services-security-header"><strong>Private</strong> live stream</h2>
+      <h5 class="services-security-description">Monetize your show. Watch it later.</h5>
+      <hr>
+      <form action="https://formspree.io/xbjanzbn" id="form2" method="POST">
+        <label>Your email: <input type="email" name="_email" maxlength="40" size="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></label>
+        <label>How many viewers? <input type="viewers" id="viewers" name="_viewers" maxlength="2" size="2" pattern="[0-9]+[0-9]$" required></label>
+        <label>Password protected stream? <input type="checkbox" name="_login" value="login" checked disabled></label>
+        <strong>How much?</strong> 1,20 Euro per viewer (incl. VAT)
+      </form>
+      <hr>
+      <h3 class="services-security-description">More Features</h3>
+        <ul class="list">
+          <li>A protected web page for you to share with your viewers</li>
+          <li>A recording of your stream(s) to download</li>
+          <li>Your stream address and instructions on how to setup your stream</li>
+          <li>Your own account and password to start streaming</li>
+          <li>Your viewers accounts and passwords</li>
+          <li><strong>The logins and stream address is valid for 48 hours</strong></li>
+        </ul>
+      <hr>
+      <h3 class="services-security-description">Checkout</h3>
+      <div id="paypal-button-container"></div>
+        <script>
+          paypal.Buttons({
+            createOrder: function(data, actions) {
+              var price = 1.20
+              var amountViewers = Number(document.getElementById("viewers").value);
+              var total = (price * amountViewers).toString();
+
+              // This function sets up the details of the transaction, including the amount and line item details.
+              return actions.order.create({
+                purchase_units: [{
+                  amount: {
+                    value: total
+                  }
+                }]
+              });
+            },
+            onApprove: function(data, actions) {
+              // This function captures the funds from the transaction.
+              return actions.order.capture().then(function(details) {
+                // This function shows a transaction success message to your buyer.
+                document.getElementById("form2").submit();
+              });
+            }
+          }).render('#paypal-button-container');
+          //This function displays Smart Payment Buttons on your web page.
+        </script>
+      <hr>
+      <h3 class="services-security-description">What's next?</h3>
+      <p>Got your data? Your viewers are ready to watch? Your stream is live? Great!</p>
+        <ul class="list">
+          <li>Provide each viewer the stream address</li>
+          <li>Provide each viewer their access credentials</li>
+          <li><strong>You're good to go!</strong></li>
+        </ul>
+        <p>--</p>
+
+    </div>
+  </div>
+
+  <div class="section-small security" id="security">
+    <div class="container">
+      <h2 class="services-security-header">Need help or something else?</h2>
+      <h5 class="services-security-description">Contact us</h5>
+      <hr>
+      <p>Just <a href="https://www.schmidbauer.cz/en/#contact">contact</a> us by Phone, Email, WhatsApp ..</p>
+    </div>
+  </div>
+
+</body>
+</html>
